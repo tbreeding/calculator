@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+  background-color: #3a9899;
+  font-family: orbitron;
+  min-width: 800px;
+  text-align: center;
+}
+.calcBody {
+  //positioning
+  height: 480px;
+  width: 320px;
+  position:fixed; 
+  left:0; right:0;
+  top:0; bottom:0;
+  margin:auto;
+  //setup the grid & internal spacing
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5em;
+  padding: 1.3em;
+  //color & shading
+  background-color: #CBC5B7;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px 5px #CBC5B7, 2px 1px 6px 7px #788173, 2px 1px 6px 5px #456d40, 8px 7px 5px 5px #000000;
+}
+.display {
+  grid-column: 1/5;
+  height: 72px;
+  background-color: rgba(50, 70, 50, .3);
+  border: 3px rgba(50, 70, 50, .1) solid;
+  border-radius: 5px;
+  text-align: right;
+  font-family: orbitron;
+}
+
+.primary p {
+  margin: 0;
+  font-size: 2.5em;
+}
+.secondary p {
+  color: rgba(50, 70, 50, .55);
+  margin: 0;
+  padding-right: .2em;
+}
+.smBtn {
+  background-color: #9B9EA5;
+  padding: .5em;
+  border-radius: 5px;
+  box-shadow: 2px 1px 3px 5px #9B9EA5, 5px 5px 8px 4px #000000;
+  transition: all .1s;
+  font-size: 1.5em;
+  user-select: none;
+}
+.smBtn:active {
+  box-shadow: 2px 1px 3px 2px #9B9EA5, 3px 2px 3px 2px #000000;
+  transform: translate(3px,4px);
+}
+.smBtn:hover {
+  cursor: pointer;
+}
+.ac, .ce{
+  background-color: #7E0E1E;
+  box-shadow: 2px 1px 3px 5px #7E0E1E, 5px 5px 8px 4px #000000;
+  color: #DDCCBB;
+}
+.ac:active, .ce:active {
+  box-shadow: 2px 1px 3px 2px #7E0E1E, 3px 2px 3px 2px #000000;
+  transform: translate(3px,4px);
+  user-select: none;
+}
+.equals {
+  grid-row: 5/7;
+  grid-column: 4;
+  line-height: 4.5em;
+}
+.zero {
+  grid-column: 1/3;
+}
+.dot {
+  line-height: .1em;
+  font-size: 2em;
+}
+.minus, .plus{
+  font-size: 30px;
+  line-height: .7em;
+}
+.equals{  
+  background-color: #2CAE1E;
+  box-shadow: 2px 1px 3px 5px #2CAE1E, 5px 5px 8px 4px #000000;
+}
+.equals:active {
+  box-shadow: 2px 1px 3px 2px #2CAE1E, 3px 2px 3px 2px #000000;
+  transform: translate(3px,4px);
+  user-select: none;
+}
+//footer
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  width: 100%;
+  line-height: 0px;
+  font-size: .8em;
+  padding-right: 10px;
+  background-color: rgba(245, 245, 245, .5);
+  text-align: right;
+  user-select: none;
+}
